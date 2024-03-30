@@ -35,14 +35,17 @@
   height: 100%;
   width: 100%;
   display: grid;
-  background: #353e50;
+  background: #689d06;
+  border: 1px solid #406300;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 .play-board .food {
-  background: darkorange;
+  background: rgb(255, 0, 0);
+  /* border-radius: 50%; */
 }
 .play-board .head {
-  background: #3f9afc;
+  background: #3fbdfc;
+  border: 3px solid #1a506b;
 }
 
 .controls {
@@ -72,4 +75,8 @@
     padding: 15px 0;
     font-size: 1rem;
   }
+}
+
+.head {
+  
 }
