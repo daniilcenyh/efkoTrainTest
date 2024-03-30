@@ -14,8 +14,7 @@ const storageKeys = {
 let highScore = localStorage.getItem(storageKeys.highScore) || 0;
 
 function drawHighScore(amount) {
-    document.querySelector("#hi-score")
-        .innerText = amount;
+    document.querySelector("#hi-score").innerText = amount;
 }
 
 function openLostModal() {
@@ -86,6 +85,7 @@ function handleNewIteration() {
     score++;
 
     document.querySelector('#score').innerText = score;
+    document.querySelector("#yourScore").innerText = score;
 
     highScore = score >= highScore ? score : highScore;
 
@@ -116,6 +116,7 @@ function restartGame() {
     modal.style.display = 'none';
     document.intervalId = setInterval(initGame, 100);
     document.querySelector('#score').innerText = score;
+    document.getElementById("#text-gray-700").innerHTML = score;
 }
 
 function renderSnake(body, positionX, positionY) {
@@ -178,3 +179,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         modal.style.display = "block";
     });
 })
+
+
+console.log(score);
+// document.getElementById("#text-gray-700").innerHTML = score
